@@ -1,0 +1,87 @@
+.dl-menuwrapper {
+    border-radius: 5px;
+    top: 20px;
+    left: 20px;
+    z-index: 9999;
+}
+
+.dl-menuwrapper button {
+     z-index: 999999;
+     /*background: #222;*/
+     border: none;
+     width: 48px;
+     height: 45px;
+     text-indent: -900em;
+     overflow: hidden;
+     cursor: pointer;
+     outline: none;
+     border-top-right-radius: 3px;
+     border-bottom-right-radius: 3px;
+     border-bottom-left-radius: 3px;
+     border-top-left-radius: 3px;
+     opacity: 1;
+}
+
+.dl-menuwrapper button:hover,
+.dl-menuwrapper button.dl-active,
+.dl-menuwrapper ul {
+	/*background: #aaa;*/
+}
+
+.dl-menuwrapper button:after {
+	content: '';
+    position: absolute;
+    width: 68%;
+    height: 5px;
+    background: #fff;
+    top: 10px;
+    left: 16%;
+    box-shadow: 0 10px 0 #fff, 0 20px 0 #fff
+}
+
+.dl-menuwrapper ul {
+	padding: 0;
+	min-width: 160px;
+	list-style: none;
+	background: #FFF;
+	box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.22);
+	overflow: auto;
+	border-radius: 5px;
+}
+
+.dl-menuwrapper li a {
+	display: block;
+    color: #555;
+    text-decoration: none;
+    line-height: 35px;
+    padding: 5px 15px;
+    white-space: nowrap;
+    transition: all 0.1s;s
+}
+
+.no-touch .dl-menuwrapper li a:hover {
+	background-color: #222222;
+	color: #FFF;
+	cursor: pointer
+}
+
+.dl-menuwrapper .dl-menu {
+	margin: 10px 0 0 0;
+	position: absolute;
+	width: 100%;
+	opacity: 0;
+	pointer-events: none;
+	transition: opacity 0.15s, transform 0.15s;
+	transform: translateY(-20px) translateX(-5px) scale(0.93);
+	backface-visibility: hidden;
+}
+
+.dl-menuwrapper .dl-menu.dl-menuopen {
+	opacity: 1;
+	pointer-events: auto;
+	transform: translateY(0px);
+}
+
+#dl-menu{
+	position: fixed;
+}

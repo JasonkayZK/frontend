@@ -1,0 +1,85 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>自动打字的标题</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="自动打字的标题" content="自动打字的标题" />
+    <link rel="stylesheet" href="text_type.css" type="text/css" />
+    
+</head>
+
+<body bgcolor= black>
+
+    <header>
+        <nav>
+        </nav>
+    </header>
+
+    <h1 style="color: White">自动打字的标题</h1>
+    <!--正标题动态打印-->
+    
+<style type="text/css">
+/* 如果光标没出现，而是出现在下一行，那么就是盒子是块级标签，必须得转换成行内标签 */
+h2 {
+  display: inline;
+}
+/* 想让的光标闪动的话，复制下面的代码 */
+.typed-cursor {
+  opacity: 1;
+  color: White;
+  animation: typedjsBlink 0.7s infinite;
+  -webkit-animation: typedjsBlink 0.7s infinite;
+  animation: typedjsBlink 0.7s infinite;
+}
+@keyframes typedjsBlink{
+  50% { opacity: 0.0; }
+}
+@-webkit-keyframes typedjsBlink{
+  0% { opacity: 1; }
+  50% { opacity: 0.0; }
+  100% { opacity: 1; }
+}
+.typed-fade-out{
+  opacity: 0;
+  transition: opacity .25s;
+  -webkit-animation: 0;
+  animation: 0;
+}
+</style>
+
+<script type="text/javascript" src="typed.js"></script>
+<script>
+   document.addEventListener('DOMContentLoaded', function(){
+       var boxObj = document.getElementById('box');
+       new Typed(boxObj,{
+          // 注意：输出的可以是标签，将标签当节点运行。比如下面的h2
+          strings: [
+    	                '謙虚は人を進歩させ、ごうまんは人を落後させる。', 
+    	                '社会の初心者から、よろしくお願いします！',
+    	                'Jasonkayの部屋、ようこそ！'],
+          typeSpeed:100, // 速度
+          backDelay: 1000,
+          loop: false,
+          contentType: 'html', // or text
+          // defaults to null for infinite loop
+          loopCount: null,
+          cursorChar: '❤'
+       });
+   });
+</script>
+
+<div id="mainhead">
+    <span id="box"></span>
+</div>
+
+
+
+<!--正标题动态打印end-->
+    
+    <footer>
+    </footer>
+
+</body>
+
+</html>

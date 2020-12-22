@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<!-- saved from url=(0037)http://cheng.lolku.cn/html/typed.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="renderer" content="webkit">
+	<meta name="baidu-site-verification" content="2kRbPxMO4l">
+	<meta name="360-site-verification" content="7d5bb3c243d5725c234a6a82aae98156">
+	<meta name="sogou_site_verification" content="lWXJ3RAsHr">
+	<meta name="shenma-site-verification" content="5a1b77567ffe672de86e8b6831f48f45_1502900413">
+	<meta name="description" content="web前端屌丝程序网站，属于金哥的网站，分享一些免费接口api，前端的一些奇淫巧技。分享个人作品">
+	<meta name="keyword" content="前端,金哥,金哥主页,web前端,前端奇淫巧技,免费api接口,个人作品">
+	<title>typed.js打印效果</title>
+	<link href="./typed.js打印效果_files/monokai-sublime.min.css" rel="stylesheet">
+	<script src="./typed.js打印效果_files/highlight.min.js.下载"></script>
+	<script src="./typed.js打印效果_files/javascript.min.js.下载"></script>
+	<script src="./typed.js打印效果_files/xml.min.js.下载"></script>
+	<script src="./typed.js打印效果_files/json.min.js.下载"></script>
+	<script type="text/javascript" src="./typed.js打印效果_files/typed.js.下载"></script>
+	<style type="text/css">
+	input {
+		width: 100%;
+	}
+		h2 {
+			display: inline;
+		}
+		.typed-cursor{
+      opacity: 1;
+      animation: typedjsBlink 0.7s infinite;
+      -webkit-animation: typedjsBlink 0.7s infinite;
+      animation: typedjsBlink 0.7s infinite;
+    }
+    @keyframes typedjsBlink{
+      50% { opacity: 0.0; }
+    }
+    @-webkit-keyframes typedjsBlink{
+      0% { opacity: 1; }
+      50% { opacity: 0.0; }
+      100% { opacity: 1; }
+    }
+    .typed-fade-out{
+      opacity: 0;
+      transition: opacity .25s;
+      -webkit-animation: 0;
+      animation: 0;
+    }
+    .effect {
+    	border-left: 5px solid #33d029;
+    	padding-left: 6px;
+    }
+	</style>
+</head>
+<body>
+	<h3 class="effect">案例一：</h3>
+	<span id="box">我是最后一个打印出来的</span><span class="typed-cursor" style="animation-iteration-count: infinite;">|</span>
+	<h3 class="">案例源码：</h3>
+<pre><code class="html hljs xml">
+<span class="hljs-tag">&lt;<span class="hljs-name">style</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text/css"</span>&gt;</span><span class="css">
+<span class="hljs-comment">/* 如果光标没出现，而是出现在下一行，那么就是盒子是块级标签，必须得转换成行内标签 */</span>
+<span class="hljs-selector-tag">h2</span> {
+  <span class="hljs-attribute">display</span>: inline;
+}
+<span class="hljs-comment">/* 想让的光标闪动的话，复制下面的代码 */</span>
+<span class="hljs-selector-class">.typed-cursor</span>{
+  <span class="hljs-attribute">opacity</span>: <span class="hljs-number">1</span>;
+  <span class="hljs-attribute">animation</span>: typedjsBlink <span class="hljs-number">0.7s</span> infinite;
+  <span class="hljs-attribute">-webkit-animation</span>: typedjsBlink <span class="hljs-number">0.7s</span> infinite;
+  <span class="hljs-attribute">animation</span>: typedjsBlink <span class="hljs-number">0.7s</span> infinite;
+}
+@<span class="hljs-keyword">keyframes</span> typedjsBlink{
+  50% { <span class="hljs-attribute">opacity</span>: <span class="hljs-number">0.0</span>; }
+}
+@-<span class="hljs-keyword">webkit</span>-<span class="hljs-keyword">keyframes</span> typedjsBlink{
+  0% { <span class="hljs-attribute">opacity</span>: <span class="hljs-number">1</span>; }
+  50% { <span class="hljs-attribute">opacity</span>: <span class="hljs-number">0.0</span>; }
+  100% { <span class="hljs-attribute">opacity</span>: <span class="hljs-number">1</span>; }
+}
+<span class="hljs-selector-class">.typed-fade-out</span>{
+  <span class="hljs-attribute">opacity</span>: <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">transition</span>: opacity .<span class="hljs-number">25s</span>;
+  <span class="hljs-attribute">-webkit-animation</span>: <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">animation</span>: <span class="hljs-number">0</span>;
+}
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"box"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text/javascript"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://cdn.bootcss.com/typed.js/2.0.5/typed.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+   <span class="hljs-keyword">var</span> boxObj = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">'box'</span>);
+   <span class="hljs-keyword">new</span> Typed(boxObj,{
+      <span class="hljs-comment">// 注意：输出的可以是标签，将标签当节点运行。比如下面的h2</span>
+      strings: [<span class="hljs-string">'&lt;h2&gt;我是打印字typed.js&lt;h2&gt;'</span>,<span class="hljs-string">'我是案例一222'</span>,<span class="hljs-string">'我是最后一个打印出来的'</span>],
+      <span class="hljs-attr">typeSpeed</span>:<span class="hljs-number">200</span> <span class="hljs-comment">// 速度</span>
+   });
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+</code></pre>
+<h3 class="effect">案例二：</h3>
+<span id="box2">我要无</span><span class="typed-cursor" style="animation-iteration-count: 0;">|</span>
+<pre><code class="html hljs xml">
+<span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"box2"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text/javascript"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://cdn.bootcss.com/typed.js/2.0.5/typed.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+   <span class="hljs-keyword">var</span> boxObj2 = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">'box2'</span>);
+   <span class="hljs-keyword">new</span> Typed(boxObj2,{
+      <span class="hljs-attr">strings</span>: [<span class="hljs-string">'我要无限循环'</span>,<span class="hljs-string">'设置了loop'</span>,<span class="hljs-string">'还必须得设置loopCount'</span>],
+      <span class="hljs-attr">typeSpeed</span>: <span class="hljs-number">200</span>,
+      <span class="hljs-attr">startDelay</span>: <span class="hljs-number">100</span>,
+      <span class="hljs-attr">loop</span>: <span class="hljs-literal">true</span>,
+      <span class="hljs-attr">loopCount</span>: <span class="hljs-literal">Infinity</span>
+   });
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+</code></pre>
+<h3 class="effect">案例三：</h3>
+<span id="box3">我改变了光</span><span class="typed-cursor" style="animation-iteration-count: 0;">➼</span>
+<pre><code class="html hljs xml">
+<span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"box3"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text/javascript"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://cdn.bootcss.com/typed.js/2.0.5/typed.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+   <span class="hljs-keyword">var</span> boxObj3 = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">'box3'</span>);
+   <span class="hljs-keyword">new</span> Typed(boxObj3,{
+      <span class="hljs-attr">strings</span>: [<span class="hljs-string">'我改变了光标的样子，变成了箭头 ➼！哈哈哈'</span>],
+      <span class="hljs-attr">typeSpeed</span>: <span class="hljs-number">200</span>,
+      <span class="hljs-attr">startDelay</span>: <span class="hljs-number">100</span>,
+      <span class="hljs-attr">loop</span>: <span class="hljs-literal">true</span>,
+      <span class="hljs-attr">loopCount</span>: <span class="hljs-literal">Infinity</span>,
+      <span class="hljs-attr">cursorChar</span>: <span class="hljs-string">'➼'</span> <span class="hljs-comment">// </span>
+   });
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+</code></pre>
+<h3 class="effect">案例四：</h3>
+<input type="text" class="box4" name="">
+<pre><code class="html hljs xml">
+<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"box4"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">""</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text/javascript"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://cdn.bootcss.com/typed.js/2.0.5/typed.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+   <span class="hljs-keyword">new</span> Typed(<span class="hljs-string">'.box4'</span>,{
+      <span class="hljs-attr">strings</span>: [<span class="hljs-string">'我也可以在input中打印...飘飘~&lt;h3&gt;标签还是打印出来&lt;/h3&gt;'</span>],
+      <span class="hljs-attr">typeSpeed</span>: <span class="hljs-number">200</span>,
+      <span class="hljs-attr">startDelay</span>: <span class="hljs-number">100</span>,
+      <span class="hljs-attr">loop</span>: <span class="hljs-literal">true</span>,
+      <span class="hljs-attr">loopCount</span>: <span class="hljs-literal">Infinity</span>,
+      <span class="hljs-attr">cursorChar</span>: <span class="hljs-string">'➼'</span> <span class="hljs-comment">// </span>
+   });
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+</code></pre>
+<h3 class="effect">案例五：</h3>
+<input type="text" class="box5" name="">
+<pre><code class="html hljs xml">
+<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"box5"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">""</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text/javascript"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://cdn.bootcss.com/typed.js/2.0.5/typed.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+  <span class="hljs-keyword">new</span> Typed(<span class="hljs-string">'.box5'</span>,{
+	<span class="hljs-attr">strings</span>: [<span class="hljs-string">'进入焦点停止'</span>],
+	<span class="hljs-attr">typeSpeed</span>: <span class="hljs-number">200</span>,
+	<span class="hljs-attr">startDelay</span>: <span class="hljs-number">100</span>,
+	<span class="hljs-attr">loop</span>: <span class="hljs-literal">true</span>,
+	<span class="hljs-attr">loopCount</span>: <span class="hljs-literal">Infinity</span>,
+	<span class="hljs-attr">bindInputFocusEvents</span>:<span class="hljs-literal">true</span>,
+	<span class="hljs-attr">onComplete</span>:<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">e</span>) </span>{
+	  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'打印成功，返回参数:'</span>,e)
+    },
+    <span class="hljs-attr">preStringTyped</span>:<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">can1,can2</span>) </span>{
+	  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'打印之前回调'</span>,can1,can2)
+	}
+	<span class="hljs-comment">// 其他的事件，就不写了，在手册里面已经标注了</span>
+  });
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+</code></pre>
+<h3 class="effect">案例六：</h3>
+<input type="text" class="box6" name="">
+<br>
+<br>
+<button class="start">开始</button>
+<button class="stop">暂停</button>
+<button class="toggle">切换</button>
+<button class="reset">重置</button>
+<pre><code class="html hljs xml">
+<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"box6"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">""</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"start"</span>&gt;</span>开始<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"stop"</span>&gt;</span>暂停<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"toggle"</span>&gt;</span>切换<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"reset"</span>&gt;</span>重置<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text/javascript"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://cdn.bootcss.com/typed.js/2.0.5/typed.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+<span class="hljs-keyword">var</span> startBtn = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">'.start'</span>);
+<span class="hljs-keyword">var</span> stopBtn = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">'.stop'</span>);
+<span class="hljs-keyword">var</span> toggleBtn = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">'.toggle'</span>);
+<span class="hljs-keyword">var</span> resetBtn = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">'.reset'</span>);
+<span class="hljs-keyword">var</span> typed = <span class="hljs-keyword">new</span> Typed(<span class="hljs-string">'.box6'</span>,{
+  <span class="hljs-attr">strings</span>: [<span class="hljs-string">'温故而知新，可以为师矣。学而不思则罔 思而不学则殆。见贤思齐焉，见不贤而内自省也。'</span>],
+  <span class="hljs-attr">typeSpeed</span>: <span class="hljs-number">200</span>,
+  <span class="hljs-attr">startDelay</span>: <span class="hljs-number">100</span>,
+  <span class="hljs-attr">loop</span>: <span class="hljs-literal">true</span>,
+  <span class="hljs-attr">loopCount</span>: <span class="hljs-literal">Infinity</span>,
+  <span class="hljs-attr">bindInputFocusEvents</span>:<span class="hljs-literal">true</span>
+});
+startBtn.onclick = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+  typed.start();
+}
+stopBtn.onclick = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+  typed.stop();
+}
+toggleBtn.onclick = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+  typed.toggle();
+}
+resetBtn.onclick = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+  typed.reset();
+}
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+</code></pre>
+	<script>
+		var boxObj = document.getElementById('box');
+		// 实例化
+		new Typed(boxObj,{
+			strings: ['<h2>我是打印字typed.js<h2>','我是案例一222','我是最后一个打印出来的'],
+			typeSpeed: 200
+		});
+		var boxObj2 = document.getElementById('box2');
+		new Typed(boxObj2,{
+			strings: ['我要无限循环','设置了loop','还必须得设置loopCount'],
+			typeSpeed: 200,
+			startDelay: 100,
+			loop: true,
+			loopCount: Infinity
+		});
+		var boxObj3 = document.getElementById('box3');
+		new Typed(boxObj3,{
+			strings: ['我改变了光标的样子，变成了箭头 ➼！哈哈哈'],
+			typeSpeed: 200,
+			startDelay: 100,
+			loop: true,
+			loopCount: Infinity,
+			cursorChar: '➼' // 
+		});
+		new Typed('.box4',{
+			strings: ['我也可以在input中打印...飘飘~<h3>标签还是打印出来</h3>'],
+			typeSpeed: 200,
+			startDelay: 100,
+			loop: true,
+			loopCount: Infinity,
+			cursorChar: '➼',
+			autoInsertCss:true,
+
+
+		});
+		new Typed('.box5',{
+			strings: ['进入焦点停止'],
+			typeSpeed: 200,
+			startDelay: 100,
+			loop: true,
+			loopCount: Infinity,
+			bindInputFocusEvents:true,
+			/*onComplete:function (e) {
+				console.log('打印完成后成功，返回参数:',e)
+			},
+			preStringTyped:function (can1,can2) {
+				console.log('打印之前回调',can1,can2)
+			}*/
+		});
+
+		var startBtn = document.querySelector('.start');
+		var stopBtn = document.querySelector('.stop');
+		var toggleBtn = document.querySelector('.toggle');
+		var resetBtn = document.querySelector('.reset');
+		var typed = new Typed('.box6',{
+			strings: ['温故而知新，可以为师矣。学而不思则罔 思而不学则殆。见贤思齐焉，见不贤而内自省也。'],
+			typeSpeed: 200,
+			startDelay: 100,
+			loop: true,
+			loopCount: Infinity,
+			bindInputFocusEvents:true
+		});
+		startBtn.onclick = function () {
+			typed.start();
+		}
+		stopBtn.onclick = function () {
+			typed.stop();
+		}
+		toggleBtn.onclick = function () {
+			typed.toggle();
+		}
+		resetBtn.onclick = function () {
+			typed.reset();
+		}
+
+
+		if (/(iPhone|iPad|iPod|iOS)/i.test(navigator.userAgent) ||/(Android)/i.test(navigator.userAgent) ) {
+			var meta = document.createElement('meta');
+			meta.name = 'viewport';
+			meta.setAttribute('content','width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0');
+			document.head.appendChild(meta);
+		}else {
+		    // window.location.href ="pc.html";
+		};
+		hljs.initHighlightingOnLoad();
+	</script>
+
+</body></html>

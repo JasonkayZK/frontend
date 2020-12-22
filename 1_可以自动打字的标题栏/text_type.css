@@ -1,0 +1,5 @@
+.headermaintitle, #box, .typed-cursor {
+    font-size: 2.75em;
+    color: rgba(255,255,255,.8);
+    text-shadow: 0 0 5px #c3c3c3;
+}

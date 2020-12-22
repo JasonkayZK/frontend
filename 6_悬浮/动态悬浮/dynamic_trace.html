@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>悬浮侧边栏</title>
+		<style>
+			#div1{
+				width: 100px;
+				height: 150px;
+				background: red;
+				position: absolute;
+				right: 0;
+				bottom: 0;
+			} 
+		</style>
+		<script>
+			window.onscroll=function(){
+				var oDiv1=document.getElementById('div1');
+				var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+				
+//				oDiv1.style.top=document.documentElement.clientHeight-oDiv1.offsetHeight+scrollTop+'px';
+//				oDiv1.style.top=(document.documentElement.clientHeight-oDiv1.offsetHeight)/2+scrollTop+'px';
+//				
+
+
+
+
+//				startMove(document.documentElement.clientHeight-oDiv1.offsetHeight+scrollTop);
+				startMove((document.documentElement.clientHeight-oDiv1.offsetHeight)/2+scrollTop);
+			}
+			var timer=null;
+			function startMove(iTarget){
+				var oDiv1=document.getElementById('div1');
+				clearInterval(timer);
+				timer=setInterval(function(){
+					var speed=(iTarget-oDiv1.offsetTop)/8;
+					speed=speed>0?Math.ceil(speed):Math.floor(speed);
+					
+					if(oDiv1.offsetTop==iTarget){
+						clearInterval(timer);
+					}else{
+						var oTxt1=document.getElementById('txt1');
+						oTxt1.value=oDiv1.offsetTop;
+						oDiv1.style.top=oDiv1.offsetTop+speed+'px';
+					}
+				},30)
+			}
+		</script>
+	</head>
+	<body style="height:2000px;">
+		<input type="text" id="txt1" style="position: fixed; right: 0;"/>
+		<div id="div1">
+			
+		</div>
+	</body>
+</html>

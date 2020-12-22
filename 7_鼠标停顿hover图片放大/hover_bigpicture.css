@@ -1,0 +1,26 @@
+/*文章图片幻灯样式重写*/
+
+.desc_img {
+    overflow: hidden;
+    border-radius: 13px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-origin: border-box;
+    width: 100%;
+    float: none;
+    padding: 4px;
+    transition: all 0.8s;
+    max-width: 100% !important;
+    max-height: 100% !important;
+	width: 500px;
+    height: 300px;    
+
+
+}
+.desc_img:hover{
+   transform: scale(1.8);
+ 
+}
+
+/*图片幻灯样式重写end*/

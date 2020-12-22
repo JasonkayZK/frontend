@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html"/>
+    <meta http-equiv="Description" content="张小凯的个人博客"/>
+    <meta http-equiv="Keywords" content="张小凯, 个人博客, 技术学习, 技术分享"/>
+    <meta charset="utf-8"/>
+    <meta name="generator" content="DW"/>
+    <meta name="revised" content="Jasonkay 18/11/3"/>
+    <meta name="author" content="Jasonkay"/>
+
+    <!--    <base target="_blank" />  -->
+    <title>张小凯的博客</title>
+
+    <!------------------------------------ CSS区 -------------------------------------->
+    <link rel="stylesheet" type="text/css" href="css/fram.css"/>
+    <link rel="stylesheet" type="text/css" href="css/icon.css"/>
+    <link rel="stylesheet" type="text/css" href="css/nav.css"/>
+    <link rel="stylesheet" type="text/css" href="css/widget.css"/>
+    <link rel="stylesheet" type="text/css" href="css/text_type.css"/>
+    <link rel="stylesheet" type="text/css" href="css/font-awesome-4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css/1_dlmenu/ResponsiveMultiLevelMenu-master/css/component.css"/>
+    <link rel="stylesheet" type="text/css" href="css/1_dlmenu/ResponsiveMultiLevelMenu-master/css/default.css"/>
+    <link rel="stylesheet" type="text/css" href="css/footer.css"/>
+
+
+    <!-----------------------------------动态文显示 ---------------------------------->
+    <style type="text/css">
+        /* 如果光标没出现，而是出现在下一行，那么就是盒子是块级标签，必须得转换成行内标签 */
+        h2 {
+            display: inline;
+        }
+
+        /* 想让的光标闪动的话，复制下面的代码 */
+        .typed-cursor {
+            opacity: 1;
+            color: White;
+            animation: typedjsBlink 0.7s infinite;
+            -webkit-animation: typedjsBlink 0.7s infinite;
+            animation: typedjsBlink 0.7s infinite;
+        }
+
+        @keyframes typedjsBlink {
+            50% {
+                opacity: 0.0;
+            }
+        }
+
+        @-webkit-keyframes typedjsBlink {
+            0% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        .typed-fade-out {
+            opacity: 0;
+            transition: opacity .25s;
+            -webkit-animation: 0;
+            animation: 0;
+        }
+    </style>
+    <!-----------------------------------动态文显示end ---------------------------------->
+
+    <!------------------------------------ JS区 --------------------------------------->
+    <script type="text/javascript" src="js/1_dlmenu/ResponsiveMultiLevelMenu-master/js/jquery.dlmenu.js"></script>
+    <script type="text/javascript" src="js/1_dlmenu/ResponsiveMultiLevelMenu-master/js/modernizr.custom.js"></script>
+    <script type="text/javascript" src="js/footer.js"></script>
+</head>
+
+<body>
+<!--------------------------------- 开场动画 --------------------------------------->
+<div class="loading">
+    <img src="img/o_miao.gif" alt="loading"/>
+    <span style="color: white"><span class="self_point">にゃにゃ、ようこそ!</span></span>
+</div>
+<!--------------------------------- 开场动画end --------------------------------------->
+
+
+<!--------------------------------- 头部标题区域 ------------------------------------>
+<div id="header">
+    <img class="blog-background" alt="background" src="img/20.jpg"/>
+    <div id="mainheadicon" class="mainheadicon">
+        <script type="text/javascript" src="typed.js"></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                var boxObj = document.getElementById('box');
+                new Typed(boxObj, {
+                    // 注意：输出的可以是标签，将标签当节点运行。比如下面的h2
+                    strings: [
+                        '謙虚は人を進歩させ、ごうまんは人を落後させる。',
+                        '社会の初心者から、よろしくお願いします！',
+                        'Jasonkayの部屋、ようこそ！'],
+                    typeSpeed: 100, // 速度
+                    backDelay: 1000,
+                    loop: false,
+                    contentType: 'html', // or text
+                    // defaults to null for infinite loop
+                    loopCount: null,
+                    cursorChar: '❤'
+                });
+            });
+        </script>
+        <h1>
+            <a id="headerdynamicword" class="headerdynamicword" href="http://www.jasonkayzk666.club/">
+                <span id="box"></span>
+            </a>
+        </h1>
+
+        <h2>
+            <div class="headercenter">
+                <img class="headermainicon" itemprop="image"/>
+
+            </div>
+
+        </h2>
+
+
+    </div>
+    <div id="iconlinklist" class="iconlinklist">
+        <ul>
+            <li>
+            </li>
+        </ul>
+    </div>
+
+</div>
+<!--------------------------------- 头部标题区域end ------------------------------------>
+
+<!------------------------------- 文章内容部分最大的容器开始 ------------------------------------>
+<div class="container">
+    <!--------------------------------- 每一个卡片部分 -------------------------------------->
+    <div class="content_card">
+
+    </div>
+
+
+</div>
+<footer>
+    <!--底部版权开始-->
+
+    <div id="customFooter">
+        <h1 class="footer-title"></h1>
+
+        <!--调用LWL大佬的每日一言API-->
+        <script type="text/javascript" src="https://api.lwl12.com/hitokoto/main/get?encode=js&charset=utf-8"></script>
+        <div id="lwlhitokoto"><b>「一言·」</b>
+            <script>lwlhitokoto()</script>
+        </div>
+
+
+        <p id="copyright">
+            Copyright
+            <i class="fa fa-heart throb" style="color:#d43f57">❤
+            </i>
+            ©2017-2018 <a href="http://www.jasonkayzk666.club/"> Jasonkay Service provided by Cloud.Tencent</a>
+
+            <span id="showsectime" style="color:#707070;font-size: 14px;">本网页已萌萌哒运行0天0小时0分0秒</span>
+
+
+            <span class="my-face" style="color:#707070;font-size: 14px;">(ฅ&gt;ω&lt;*ฅ)♥</span>
+
+
+            <script type="text/javascript">
+                function NewDate(str) {
+                    str = str.split('-');
+                    var date = new Date();
+                    date.setUTCFullYear(str[0], str[1] - 1, str[2]);
+                    date.setUTCHours(0, 0, 0, 0);
+                    return date;
+                }
+
+                function showsectime() {
+                    var birthDay = NewDate("2018-10-31");
+                    var today = new Date();
+                    var timeold = today.getTime() - birthDay.getTime();
+                    var sectimeold = timeold / 1000
+                    var secondsold = Math.floor(sectimeold);
+                    var msPerDay = 24 * 60 * 60 * 1000;
+                    var e_daysold = timeold / msPerDay;
+                    var daysold = Math.floor(e_daysold);
+                    var e_hrsold = (daysold - e_daysold) * -24;
+                    var hrsold = Math.floor(e_hrsold);
+                    var e_minsold = (hrsold - e_hrsold) * -60;
+                    var minsold = Math.floor((hrsold - e_hrsold) * -60);
+                    var seconds = Math.floor((minsold - e_minsold) * -60).toString();
+                    document.getElementById("showsectime").innerHTML = "博客已萌萌哒运行" + daysold + "天" + hrsold + "小时" + minsold + "分" + seconds + "秒";
+                    setTimeout(showsectime, 1000);
+                }
+
+                showsectime();
+            </script>
+        </p>
+    </div>
+    <!--底部版权end-->
+</footer>
+</body>
+</html>

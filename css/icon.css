@@ -1,0 +1,48 @@
+@charset "utf-8";
+/*CSS Document*/
+
+* {
+  margin: auto;
+  padding: 0;
+}
+
+#icon{
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+#icon ul{
+  list-style-type: none;
+}
+
+#icon li{
+  float: left;
+  margin-left: 36px;
+}
+
+#icon span{
+  display: none;
+}
+
+#icon a{
+  font-size: 14px;
+  text-decoration: none;
+  display: block;
+  font-weight: bold;
+  color: #663300;
+}
+
+#icon a:hover{
+  top: 1px;
+  left: 1px;
+  position: relative;
+  color: #ccc;
+}
+
+#icon a:hover span{
+  display: block;
+  top: 25px;
+  left: -4px;
+  position: absolute;
+  color: #663300;
+}

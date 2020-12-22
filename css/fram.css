@@ -1,0 +1,97 @@
+@charset "utf-8";
+
+body{ /* 页面整体背景颜色 */
+  background: #998559;
+}
+
+.mainfram{
+  width: 960px;
+  background-image: url(../img/006MhmB7gy1fh24g66uyuj31hc0u0h15.jpg)
+}
+
+.headfram {
+  height: 540px;
+  background: url(../img/5DaYXK.jpg) no-repeat;
+}
+
+.headicon {
+  margin-left: 300px;
+  padding-left: 50px;
+  padding-top: 100px;
+}
+
+.iconfram {
+  height: 30px;
+  padding-left: 35px;
+  padding-top: 15px;
+}
+
+
+.titlefram {
+  width: 960px;
+  border: #998559 2px solid;
+  background-color: #F6EABA;
+  padding-top: 15px;
+}
+
+.contentfram {
+  width: 960px;
+  border: #998559 2px solid;
+  background-color: #F6EABA;
+  border-top: 0px;
+  clear: both;
+}
+
+.leftfram {
+  width: 480px;
+  font-size: 14px;
+  padding: 20px;
+  float: left;
+  text-align: left;
+  border-right: #998559 2px solid;
+  line-height: 24px;
+  color: #333333;
+}
+
+.rightfram {
+  float: right;
+  margin-right: 140px;
+  width: 180px;
+  height: 180px;
+  border: #993300 2px solid;
+  margin-top: 40px;
+}
+
+.clearfram {
+  clear:both;
+}
+
+h2 {
+  text-align: left;
+  padding: 5px 50px;
+  font-family: "宋体"; color: #990000;
+}
+
+hr {
+  height: 2px;
+}
+
+footer {
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: .625rem;
+  padding-left: .625rem;
+  /*max-width: 44.375rem;*/
+  width: 944px;
+  background-color: black;
+  color: white;
+  clear: both;
+}
+
+
+
+
+
+
+

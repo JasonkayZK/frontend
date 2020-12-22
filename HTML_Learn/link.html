@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head id="head">
+  <meta http-equiv="Content-Type" content="text/html" />
+  <meta http-equiv="Description" content="张小凯的HTML学习网站" />
+  <meta http-equiv="Keywords" content="张小凯, 个人网页, 知识分享, HTML学习" />
+  <meta charset="utf-8" />
+  <meta name="generator" content="DW" />
+  <meta name="revised" content="Jasonaky 18/10/22" />
+  <meta name="author" content="Jasonkay" />
+  
+  <!--------------------- 修改 ----------------------->
+  <title>链接</title>
+  
+  <style type="text/css">
+    a {
+      text-decoration: none;
+    }
+  </style>
+  
+  </head>
+  
+  <!--------------------- 内容 ----------------------->
+  <body bgcolor="#F3AB25">
+    <h1>1. 链接的定义格式&lt;a&gt;:</h1>
+    <p>
+        &lt;a href="url"&gt;Link text&lt;/a&gt;
+    </p>
+<p><pre>
+    &lt;a href="http://www.jasonkay.club/"&gt;Visit jasonkay&lt;/a&gt;
+</pre></p>
+
+    <p><strong>注:</strong> <br />
+        &nbsp;&nbsp;1. "链接文本" 不必一定是文本。图片或其他 HTML 元素都可以成为链接。<br />
+        &nbsp;&nbsp;2. href 属性规定链接的目标。<br />
+        &nbsp;&nbsp;3. 开始标签和结束标签之间的文字被作为超级链接来显示。
+    </p>
+    
+    <h1>2. 链接的target属性:</h1>
+    <p><pre>
+    &lt;a href="http://www.jasonkayzk666.club/" target="_blank"&gt;Visit Jasonaky!&lt;/a&gt;        
+    </p></pre>
+    
+    <p><strong>注:</strong> <br />
+        &nbsp;&nbsp;使用 Target 属性，你可以定义被链接的文档在何处显示。<br />
+        &nbsp;&nbsp;"_blank"会在新窗口打开文档.
+    </p>    
+
+    <h1>3. 链接的name属性:</h1>
+    <p>
+        &nbsp;&nbsp;name 属性规定锚（anchor）的名称。 <br />
+        &nbsp;&nbsp;您可以使用 name 属性创建 HTML 页面中的书签。 <br />
+        &nbsp;&nbsp;书签不会以任何特殊方式显示，它对读者是不可见的。 <br />
+        &nbsp;&nbsp;当使用命名锚（named anchors）: <br />
+        &nbsp;&nbsp;我们可以创建直接跳至该命名锚（比如页面中某个小节）的链接，这样使用者就无需不停地滚动页面来寻找他们需要的信息了.   
+    </p>
+
+<p><pre>
+例:
+    首先，我们在 HTML 文档中对锚进行命名（创建一个书签）：
+    &lt;a name="tips"&gt;基本的注意事项 - 有用的提示&lt;/a&gt;
+    
+    可以在其他页面中或在同一个文档中创建指向该锚的链接：
+    
+    &lt;a href="#tips"&gt;有用的提示&lt;/a&gt;
+    &lt;a href="http://www.jasonkayzk666.club#tips"&gt;有用的提示&lt;/a&gt;
+</p></pre>
+    
+    <p><strong>注:</strong> <br />
+        &nbsp;&nbsp;请始终将正斜杠添加到子文件夹。<br />
+        &nbsp;&nbsp;假如这样书写链接：href="http://www.jasonkayzk666.club/html"，就会向服务器产生两次 HTTP 请求。这是因为服务器会添加正斜杠到这个地址，然后创建一个新的请求，就像这样：href="http://www.jasonkayzk666.club/html/"。
+        <br />
+        &nbsp;&nbsp;假如浏览器找不到已定义的命名锚，那么就会定位到文档的顶端。不会有错误发生。
+        
+    </p>    
+    
+      
+  </body>  
+</html>

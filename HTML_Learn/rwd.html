@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+  <head id="head">
+  <meta http-equiv="Content-Type" content="text/html" />
+  <meta http-equiv="Description" content="张小凯的HTML学习网站" />
+  <meta http-equiv="Keywords" content="张小凯, 个人网页, 知识分享, HTML学习" />
+  <meta charset="utf-8" />
+  <meta name="generator" content="DW" />
+  <meta name="revised" content="Jasonaky 18/10/22" />
+  <meta name="author" content="Jasonkay" />
+  
+  <!--------------------- 修改 ----------------------->
+  <title>响应式Web设计</title>
+  
+  <style type="text/css">
+    a {
+      text-decoration: none;
+    }
+    .city {
+        float: left;
+        margin: 5px;
+        padding: 15px;
+        width: 300px;
+        height: 300px;
+        border: 1px solid black;
+    }
+    
+  </style>
+  
+  </head>
+  
+  <!--------------------- 内容 ----------------------->
+  <body bgcolor="#F3AB25">
+    <h1>1. 响应式Web设计(RWD):</h1>
+        <ul>
+            <li>RWD 指的是响应式 Web 设计（Responsive Web Design）</li>
+            <li>RWD 能够以可变尺寸传递网页</li>
+            <li>RWD 对于平板和移动设备是必需的</li>
+        </ul>
+    <h1>2. 创建一个自己的RWD:</h1>
+    <p>
+        <h1>Jasonkay Demo</h1>
+        <h2>Resize this responsive page!</h2>
+        <br />
+        
+        <div class="city">
+            <h2>London</h2>
+            <p>London is the capital city of England.</p>
+            <p>It is the most populous city in the United Kingdom,
+            with a metropolitan area of over 13 million inhabitants.</p>
+        </div>
+        
+        <div class="city">
+            <h2>Paris</h2>
+            <p>Paris is the capital and most populous city of France.</p>
+        </div>
+        
+        <div class="city">
+            <h2>Tokyo</h2>
+            <p>Tokyo is the capital of Japan, the center of the Greater Tokyo Area,
+            and the most populous metropolitan area in the world.</p>
+        </div>
+
+<pre>
+Code:
+HTML:
+    &lt;!DOCTYPE html&gt;
+    &lt;html lang="en-US"&gt;
+    &lt;head&gt;
+    &lt;style&gt;
+    .city {
+    float: left;
+    margin: 5px;
+    padding: 15px;
+    width: 300px;
+    height: 300px;
+    border: 1px solid black;
+    } 
+    &lt;/style&gt;
+    &lt;/head&gt;
+
+    &lt;body&gt;
+
+    &lt;h1&gt;W3School Demo&lt;/h1&gt;
+    &lt;h2&gt;Resize this responsive page!&lt;/h2&gt;
+    &lt;br&gt;
+
+    &lt;div class="city"&gt;
+    &lt;h2&gt;London&lt;/h2&gt;
+    &lt;p&gt;London is the capital city of England.&lt;/p&gt;
+    &lt;p&gt;It is the most populous city in the United Kingdom,
+    with a metropolitan area of over 13 million inhabitants.&lt;/p&gt;
+    &lt;/div&gt;
+
+    &lt;div class="city"&gt;
+    &lt;h2&gt;Paris&lt;/h2&gt;
+    &lt;p&gt;Paris is the capital and most populous city of France.&lt;/p&gt;
+    &lt;/div&gt;
+
+    &lt;div class="city"&gt;
+    &lt;h2&gt;Tokyo&lt;/h2&gt;
+    &lt;p&gt;Tokyo is the capital of Japan, the center of the Greater Tokyo Area,
+    and the most populous metropolitan area in the world.&lt;/p&gt;
+    &lt;/div&gt;
+
+    &lt;/body&gt;
+    &lt;/html&gt;    
+ 
+</pre>
+    </p>
+    
+    <h1>3. 使用框架(例: Bootstrap框架):</h1>
+    <p>
+        <a href="bootstrap.html" name="example">Bootstrap Example</a>
+<pre>
+Code:
+HTML:
+    &lt;!DOCTYPE html&gt;
+    &lt;html&gt;
+    &lt;head&gt;
+        &lt;meta charset="utf-8" /&gt;
+        &lt;meta name="viewport" content="width=device-width", initial-scale=1" /&gt;
+        &lt;link rel="stylesheet"
+            href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" /&gt;
+            
+    &lt;/head&gt;
+
+        &lt;body&gt;
+            &lt;div class="container"&gt;
+            &lt;div class="jumbotron"&gt;
+                &lt;h1&gt;Jasonkay Demo&lt;/h1&gt;
+                &lt;p&gt;Resize this responsive page!&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;/div&gt;
+            
+            &lt;div class="container"&gt;
+            &lt;div class="row"&gt;
+                &lt;div class="col-md-4"&gt;
+                    &lt;h2&gt;London&lt;/h2&gt;
+                    &lt;p&gt;London is the capital city of England.&lt;/p&gt;
+                    &lt;p&gt;It is the most populous city in the United Kingdom,
+                    with a metropolitan area of over 13 million inhabitants.&lt;/p&gt;
+                &lt;/div&gt;
+                &lt;div class="col-md-4"&gt;
+                    &lt;h2&gt;Paris&lt;/h2&gt;
+                    &lt;p&gt;Paris is the capital and most populous city of France.&lt;/p&gt;
+                &lt;/div&gt;
+                &lt;div class="col-md-4"&gt;
+                    &lt;h2&gt;Tokyo&lt;/h2&gt;
+                    &lt;p&gt;Tokyo is the capital of Japan, the center of the Greater Tokyo Area,
+                    and the most populous metropolitan area in the world.&lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;    
+            &lt;/div&gt;
+            
+        &lt;/body&gt;
+    &lt;/html&gt;
+</pre>
+
+    </p>
+    
+  </body>
+  
+</html>

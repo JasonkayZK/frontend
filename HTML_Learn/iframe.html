@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head id="head">
+  <meta http-equiv="Content-Type" content="text/html" />
+  <meta http-equiv="Description" content="张小凯的HTML学习网站" />
+  <meta http-equiv="Keywords" content="张小凯, 个人网页, 知识分享, HTML学习" />
+  <meta charset="utf-8" />
+  <meta name="generator" content="DW" />
+  <meta name="revised" content="Jasonaky 18/10/22" />
+  <meta name="author" content="Jasonkay" />
+  
+  <!--------------------- 修改 ----------------------->
+  <title>内联框架&lt;iframe&gt;</title>
+  
+  <style type="text/css">
+    a {
+      text-decoration: none;
+    }
+  </style>
+  
+  </head>
+  
+  <!--------------------- 内容 ----------------------->
+  <body bgcolor="#F3AB25">
+    <h1>0. 添加iframe的语法:</h1>
+    <p>
+        &nbsp;&nbsp;iframe 用于在网页内显示网页. <br />
+        语法:<br />
+        &nbsp;&nbsp;&lt;iframe src="URL"&gt;&lt;/iframe&gt;
+    </p>
+    <h1>1. 设置高度和宽度(height/width):</h1>
+    <p>
+        &nbsp;&nbsp;height 和 width 属性用于规定 iframe 的高度和宽度。
+        &nbsp;&nbsp;属性值的默认单位是像素，但也可以用百分比来设定（比如 "80%"）.<br />
+
+        <iframe src="block.html" width="200px" height="200px"></iframe>
+<pre>
+Code:
+    &lt;iframe src="block.html" width="200px" height="200px"&gt;&lt;/iframe&gt;
+
+</pre>
+    </p>
+    
+    <h1>2. 删除边框(frameborder&equiv;"0"):</h1>
+    <p>
+        &nbsp;&nbsp;frameborder 属性规定是否显示 iframe 周围的边框。<br />
+        &nbsp;&nbsp;设置属性值为 "0" 就可以移除边框：<br />
+        
+        <iframe src="block.html" frameborder="0"></iframe>
+<pre>
+Code:
+    &lt;iframe src="block.html" frameborder="0"&gt;&lt;/iframe&gt;    
+</pre>
+    </p>
+
+    <h1>3. 使用 iframe 作为链接的目标:</h1>
+    <p>
+        &nbsp;&nbsp;iframe 可用作链接的目标（target）.<br />
+        &nbsp;&nbsp;链接的 target 属性必须引用 iframe 的 name 属性：<br />
+        
+        <iframe src="block.html" name="iframe_a"></iframe>
+        <p>
+            <a href="HTMLlearn.html" target="iframe_a">HTMLindex</a>
+        </p>
+        <p>
+            <strong>注释:</strong>由于链接的目标匹配 iframe 的名称，所以链接会在 iframe 中打开。
+        </p>    
+<pre>
+Code:
+        &lt;iframe src="block.html" name="iframe_a"&gt;&lt;/iframe&gt;
+        &lt;p&gt;
+            &lt;a href="HTMLlearn.html" target="iframe_a"&gt;HTMLindex&lt;/a&gt;
+        &lt;/p&gt;   
+</pre>         
+    </p>
+    
+  </body>
+</html>

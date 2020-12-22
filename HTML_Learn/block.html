@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+  <head id="head">
+  <meta http-equiv="Content-Type" content="text/html" />
+  <meta http-equiv="Description" content="张小凯的HTML学习网站" />
+  <meta http-equiv="Keywords" content="张小凯, 个人网页, 知识分享, HTML学习" />
+  <meta charset="utf-8" />
+  <meta name="generator" content="DW" />
+  <meta name="revised" content="Jasonaky 18/10/22" />
+  <meta name="author" content="Jasonkay" />
+  
+  <!--------------------- 修改 ----------------------->
+  <title>块div</title>
+  
+  <style type="text/css">
+    a {
+      text-decoration: none;
+    }
+    
+    .cities {
+        background-color:black;
+        color:white;
+        margin:20px;
+        padding:20px;        
+    }
+    
+  </style>
+  
+  </head>
+  
+  <!--------------------- 内容 ----------------------->
+  <body bgcolor="#F3AB25">
+    <h1>1. div元素:</h1>
+<p><pre>
+    HTML &lt;div&gt; 元素是块级元素，它是可用于组合其他 HTML 元素的容器。
+
+    &lt;div&gt; 元素没有特定的含义。
+    除此之外，由于它属于块级元素，浏览器会在其前后显示折行。
+
+    如果与 CSS 一同使用，&lt;div&gt; 元素可用于对大的内容块设置样式属性。
+
+    &lt;div&gt; 元素的另一个常见的用途是文档布局。
+    它取代了使用表格定义布局的老式方法。
+    使用 &lt;table&gt; 元素进行文档布局不是表格的正确用法。
+    &lt;table&gt; 元素的作用是显示表格化的数据。
+</pre></p>
+
+    <h1>2. div与class连用:</h1>
+    <p>
+        &nbsp;&nbsp;设置&lt;div&gt;元素的类，使我们能够为相同的&lt;div&gt;元素设置相同的类：
+        <br />
+        
+        <div class="cities">
+        <h2>London</h2>
+        <p>London is the capital city of England. 
+        It is the most populous city in the United Kingdom, 
+        with a metropolitan area of over 13 million inhabitants.</p>
+        </div>
+
+        <div class="cities">
+        <h2>Paris</h2>
+        <p>Paris is the capital and most populous city of France.</p>
+        </div>
+
+        <div class="cities">
+        <h2>Tokyo</h2>
+        <p>Tokyo is the capital of Japan, the center of the Greater Tokyo Area,
+        and the most populous metropolitan area in the world.</p>
+        </div>
+
+<pre>
+Code:
+    &lt;!DOCTYPE html&gt;
+    &lt;html&gt;
+    &lt;head&gt;
+    &lt;style&gt;
+    .cities {
+        background-color:black;
+        color:white;
+        margin:20px;
+        padding:20px;
+    } 
+    &lt;/style&gt;
+    &lt;/head&gt;
+
+    &lt;body&gt;
+
+    &lt;div class="cities"&gt;
+    &lt;h2&gt;London&lt;/h2&gt;
+    &lt;p&gt;London is the capital city of England. 
+    It is the most populous city in the United Kingdom, 
+    with a metropolitan area of over 13 million inhabitants.&lt;/p&gt;
+    &lt;/div&gt;
+
+    &lt;div class="cities"&gt;
+    &lt;h2&gt;Paris&lt;/h2&gt;
+    &lt;p&gt;Paris is the capital and most populous city of France.&lt;/p&gt;
+    &lt;/div&gt;
+
+    &lt;div class="cities"&gt;
+    &lt;h2&gt;Tokyo&lt;/h2&gt;
+    &lt;p&gt;Tokyo is the capital of Japan, the center of the Greater Tokyo Area,
+    and the most populous metropolitan area in the world.&lt;/p&gt;
+    &lt;/div&gt;
+
+    &lt;/body&gt;
+    &lt;/html&gt;    
+</pre>        
+    </p>
+    
+  </body>
+  
+</html>

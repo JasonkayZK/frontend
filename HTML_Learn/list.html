@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+  <head id="head">
+  <meta http-equiv="Content-Type" content="text/html" />
+  <meta http-equiv="Description" content="张小凯的HTML学习网站" />
+  <meta http-equiv="Keywords" content="张小凯, 个人网页, 知识分享, HTML学习" />
+  <meta charset="utf-8" />
+  <meta name="generator" content="DW" />
+  <meta name="revised" content="Jasonaky 18/10/22" />
+  <meta name="author" content="Jasonkay" />
+  
+  <!--------------------- 修改 ----------------------->
+  <title>列表</title>
+  
+  <style type="text/css">
+    a {
+      text-decoration: none;
+    }
+  </style>
+  
+  </head>
+  
+  <!--------------------- 内容 ----------------------->
+  <body bgcolor="#F3AB25">
+    <h1>1. 无序列表&lt;ul/li&gt;:</h1>
+    <p>
+        <ul>
+            <li>Coffee</li>
+            <li>Milk</li>
+        </ul>
+<pre>
+注: 1. 列表项内部可以使用段落、换行符、图片、链接以及其他列表等等.
+    2. 无序列表有不同的符号,如: disc, circle, square
+    
+        &lt;ul type="***"&gt;
+     
+        &lt;ul&gt;
+            &lt;li&gt;Coffee&lt;/li&gt;
+            &lt;li&gt;Milk&lt;/li&gt;
+        &lt;/ul&gt;    
+</pre>
+    </p>
+    
+    <h1>2. 有序列表&lt;ol&gt;</h1>
+    <p>
+        <h4>Number(Default):</h4>
+        <ol>
+            <li>Apple</li>
+            <li>Banana</li>
+            <li>Lemon</li>
+            <li>Orange</li>
+        </ol>
+        
+        <h4>Alpha:</h4>
+        <ol type="A">
+            <li>Apple</li>
+            <li>Banana</li>
+            <li>Lemon</li>
+            <li>Orange</li>            
+        </ol>
+        
+        <h4>alpha:</h4>
+        <ol type="a">
+            <li>Apple</li>
+            <li>Banana</li>
+            <li>Lemon</li>
+            <li>Orange</li>            
+        </ol>  
+
+        <h4>Roman:</h4>
+        <ol type="I">
+            <li>Apple</li>
+            <li>Banana</li>
+            <li>Lemon</li>
+            <li>Orange</li>            
+        </ol>              
+<pre>
+源代码:
+        &lt;h4&gt;Number(Default):&lt;/h4&gt;
+        &lt;ol&gt;
+            &lt;li&gt;Apple&lt;/li&gt;
+            &lt;li&gt;Banana&lt;/li&gt;
+            &lt;li&gt;Lemon&lt;/li&gt;
+            &lt;li&gt;Orange&lt;/li&gt;
+        &lt;/ol&gt;
+        
+        &lt;h4&gt;Alpha:&lt;/h4&gt;
+        &lt;ol type="A"&gt;
+            &lt;li&gt;Apple&lt;/li&gt;
+            &lt;li&gt;Banana&lt;/li&gt;
+            &lt;li&gt;Lemon&lt;/li&gt;
+            &lt;li&gt;Orange&lt;/li&gt;            
+        &lt;/ol&gt;
+        
+        &lt;h4&gt;alpha:&lt;/h4&gt;
+        &lt;ol type="a"&gt;
+            &lt;li&gt;Apple&lt;/li&gt;
+            &lt;li&gt;Banana&lt;/li&gt;
+            &lt;li&gt;Lemon&lt;/li&gt;
+            &lt;li&gt;Orange&lt;/li&gt;            
+        &lt;/ol&gt;  
+
+        &lt;h4&gt;Roman:&lt;/h4&gt;
+        &lt;ol type="I"&gt;
+            &lt;li&gt;Apple&lt;/li&gt;
+            &lt;li&gt;Banana&lt;/li&gt;
+            &lt;li&gt;Lemon&lt;/li&gt;
+            &lt;li&gt;Orange&lt;/li&gt;            
+        &lt;/ol&gt;  
+</pre> 
+    </p>
+
+    <h1>3. 嵌套列表:</h1>
+    <p>
+        <h4>一个嵌套列表:</h4>
+        <ul>
+            <li>Coffee</li>
+            <li>Tea</li>
+            <ul>
+                <li>Red Tea</li>
+                <li>Green Tea</li>
+                <ul>
+                    <li>Chinese Tea</li>
+                    <li>Africa Tea</li>
+                </ul>
+            </ul>
+            <li>Milk</li>
+        </ul>
+
+<pre>
+源代码:
+        &lt;h4&gt;一个嵌套列表:&lt;/h4&gt;
+        &lt;ul&gt;
+            &lt;li&gt;Coffee&lt;/li&gt;
+            &lt;li&gt;Tea&lt;/li&gt;
+            &lt;ul&gt;
+                &lt;li&gt;Red Tea&lt;/li&gt;
+                &lt;li&gt;Green Tea&lt;/li&gt;
+                &lt;ul&gt;
+                    &lt;li&gt;Chinese Tea&lt;/li&gt;
+                    &lt;li&gt;Africa Tea&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/ul&gt;
+            &lt;li&gt;Milk&lt;/li&gt;
+        &lt;/ul&gt;
+</pre>        
+    </p>
+    
+    <h1>4. 自定义列表&lt;dl/dt/dd&gt;</h1>
+    <p>
+        <h4>一个定义列表:</h4>
+        <dl>
+            <dt>计算机</dt>
+            <dd>用来计算的仪器 ... ...</dd>
+            <dt>显示器</dt>
+            <dd>以视觉方式显示信息的装置 ... ...</dd>
+        </dl>
+        
+<pre>
+Code:
+        &lt;h4&gt;一个定义列表:&lt;/h4&gt;
+        &lt;dl&gt;
+            &lt;dt&gt;计算机&lt;/dt&gt;
+            &lt;dd&gt;用来计算的仪器 ... ...&lt;/dd&gt;
+            &lt;dt&gt;显示器&lt;/dt&gt;
+            &lt;dd&gt;以视觉方式显示信息的装置 ... ...&lt;/dd&gt;
+        &lt;/dl&gt;    
+</pre>        
+    </p>
+  
+  </body>
+  
+</html>

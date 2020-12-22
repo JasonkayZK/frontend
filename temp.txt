@@ -1,0 +1,17 @@
+class:
+    mainfram
+    headfram
+    titlefram
+    clearfram
+    contentfram 
+    leftfram
+    rightfram
+    iconfram
+
+html:
+    about.html
+    HTMLlearn.html
+    progress.html
+    comment.html
+    contact.html
+

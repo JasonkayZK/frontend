@@ -1,0 +1,82 @@
+@charset "utf-8";
+/*CSS Document*/
+
+* {
+  margin: auto;
+  padding: 0;
+}
+
+#nav{
+  margin-top: 10px;
+  margin-left: 110px;
+}
+
+#nav ul{
+  list-style-type: none;
+}
+
+#nav li{
+  float: left;
+  margin-left: 36px;
+}
+
+#nav span{
+  display: none;
+}
+
+#nav a{
+  font-size: 14px;
+  text-decoration: none;
+  display: block;
+  font-weight: bold;
+  color: #663300;
+}
+
+#nav a:hover{
+  top: 1px;
+  left: 1px;
+  position: relative;
+  color: #ccc;
+}
+
+#nav a:hover span{
+  display: block;
+  top: -2px;
+  left: -2px;
+  position: absolute;
+  color: #663300;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html>
+  <head id="head">
+  <meta http-equiv="Content-Type" content="text/html" />
+  <meta http-equiv="Description" content="张小凯的HTML学习网站" />
+  <meta http-equiv="Keywords" content="张小凯, 个人网页, 知识分享, HTML学习" />
+  <meta charset="utf-8" />
+  <meta name="generator" content="DW" />
+  <meta name="revised" content="Jasonaky 18/10/22" />
+  <meta name="author" content="Jasonkay" />
+  
+  <!--------------------- 修改 ----------------------->
+  <title>表格</title>
+  
+  <style type="text/css">
+    a {
+      text-decoration: none;
+    }
+  </style>
+  
+  </head>
+  
+  <!--------------------- 内容 ----------------------->
+  <body bgcolor="#F3AB25">
+    <h1>1. 表格的定义&lt;table border="***"&gt;:</h1>
+    <p>
+       <table border="1">
+        <tr>
+            <td>row1, cell1</td> 
+            <td>row1, cell2</td>
+            <td>row1, cell3</td>
+        </tr>
+        <tr>
+            <td>row2, cell1</td> 
+            <td>row2, cell2</td>
+            <td>&nbsp;</td>
+        </tr>
+       </table>
+    <pre>
+源代码:
+       &lt;table border="1"&gt;
+        &lt;tr&gt;
+            &lt;td&gt;row1, cell1&lt;/td&gt; 
+            &lt;td&gt;row1, cell2&lt;/td&gt;
+            &lt;td&gt;row1, cell3&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;row2, cell1&lt;/td&gt; 
+            &lt;td&gt;row2, cell2&lt;/td&gt;
+            &lt;td&gt;&nbsp;&lt;/td&gt;
+        &lt;/tr&gt;
+       &lt;/table&gt;        
+    </pre>
+    
+    <strong>注:</strong> <br />
+    &nbsp;&nbsp;表格由 &lt;table&gt; 标签来定义。<br />
+    &nbsp;&nbsp;每个表格均有若干行（由 &lt;tr&gt; 标签定义），<br />
+    &nbsp;&nbsp;每行被分割为若干单元格（由 &lt;td&gt; 标签定义）。<br />
+    &nbsp;&nbsp;字母 td 指表格数据（table data），即数据单元格的内容。<br />
+    &nbsp;&nbsp;数据单元格可以包含文本、图片、列表、段落、表单、水平线、表格等等。
+    
+    </p>
+    
+    <h1>2. 表格的边框 &lt;table border&equiv"***"&gt;:</h1>
+    <p>
+        &nbsp;&nbsp;border = 0 表示无边框(默认无边框)
+    </p>
+    
+    <h1>3. 表格的表头&lt;th&gt;</h1>
+    <p>
+        <table border="1">
+            <tr>
+                <th>Heading</th>
+                <th>Another heading</th>
+            </tr>
+            <tr>
+                <td>row1, cell1</td>
+                <td>row1, cell2</td>
+            </tr>
+            <tr>
+                <td>row2, cell1</td>
+                <td>row2, cell2</td>
+            </tr>
+            
+        </table>
+        
+    <pre>
+源代码:
+        &lt;table border="1"&gt;
+            &lt;tr&gt;
+                &lt;th&gt;Heading&lt;/th&gt;
+                &lt;th&gt;Another heading&lt;/th&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;row1, cell1&lt;/td&gt;
+                &lt;td&gt;row1, cell2&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;row2, cell1&lt;/td&gt;
+                &lt;td&gt;row2, cell2&lt;/td&gt;
+            &lt;/tr&gt;
+            
+        &lt;/table&gt;        
+    </pre>
+    </p>
+    
+    <h1>4. 表格中的空白单元格:</h1>
+    <p>
+        <strong>注:</strong> <br />
+        &nbsp;&nbsp;在一些浏览器中，没有内容的表格单元显示得不太好。<br />
+        &nbsp;&nbsp;如果某个单元格是空的（没有内容），浏览器可能无法显示出这个单元格的边框。<br />
+        <br />
+        &nbsp;&nbsp;这个空的单元格的边框没有被显示出来。 <br />
+        &nbsp;&nbsp;为了避免这种情况，在空单元格中添加一个空格占位符，就可以将边框显示出来。
+        <br />
+        
+        <table border="1">
+            <tr>
+                <td>row1, cell1</td>
+                <td>row1, cell2</td>
+                
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>row2, cell2</td>
+            </tr>
+        </table>
+        
+    </p>
+    
+    <h1>5. 两种不同的表头(水平和竖直):</h1>
+    <p>
+        <h4>表头:</h4>
+        <table border="1">
+            <tr>
+                <th>姓名</th>
+                <th>电话</th>
+                <th>性别/th>
+            </tr>
+            <tr>
+                <td>Bill</td>
+                <td>123123123</td>
+                <td>M</td>
+            </tr>
+        </table>
+        
+        <h4>垂直的表头:</h4>
+        <table border="1">
+            <tr>
+                <th>姓名</th>
+                <td>Bill</td>
+            </tr>
+            <tr>
+                <th>电话</th>
+                <td>123123123</td>
+            </tr>
+            <tr>
+                <th>性别</th>
+                <td>M</td>
+            </tr>
+        </table>
+        
+        <pre>
+源代码:            
+        &lt;h4&gt;表头:&lt;/h4&gt;
+        &lt;table border="1"&gt;
+            &lt;tr&gt;
+                &lt;th&gt;姓名&lt;/th&gt;
+                &lt;th&gt;电话&lt;/th&gt;
+                &lt;th&gt;性别/th&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;Bill&lt;/td&gt;
+                &lt;td&gt;123123123&lt;/td&gt;
+                &lt;td&gt;M&lt;/td&gt;
+            &lt;/tr&gt;
+        &lt;/table&gt;
+        
+        &lt;h4&gt;垂直的表头:&lt;/h4&gt;
+        &lt;table border="1"&gt;
+            &lt;tr&gt;
+                &lt;th&gt;姓名&lt;/th&gt;
+                &lt;td&gt;Bill&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;th&gt;电话&lt;/th&gt;
+                &lt;td&gt;123123123&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;th&gt;性别&lt;/th&gt;
+                &lt;td&gt;M&lt;/td&gt;
+            &lt;/tr&gt;
+        &lt;/table&gt;
+                    
+        </pre>
+        
+    </p>
+    
+    <h1>6. 表格的表头&lt;caption&gt;:</h1>
+        <table border="1">
+            <caption>我的标题</caption>
+            <tr>
+                <td>100</td>
+                <td>200</td>
+                <td>300</td>
+            </tr>
+            <tr>
+                <td>400</td>
+                <td>500</td>
+                <td>600</td>
+            </tr>
+            
+        </table>
+    <pre>
+源代码:        
+        &lt;table border="1"&gt;
+            &lt;caption&gt;我的标题&lt;/caption&gt;
+            &lt;tr&gt;
+                &lt;td&gt;100&lt;/td&gt;
+                &lt;td&gt;200&lt;/td&gt;
+                &lt;td&gt;300&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;400&lt;/td&gt;
+                &lt;td&gt;500&lt;/td&gt;
+                &lt;td&gt;600&lt;/td&gt;
+            &lt;/tr&gt;
+            
+        &lt;/table&gt;        
+    </pre>
+    
+    <h1>7. 跨行或跨列的表格单元格&lt;th colspan/rawspan&equiv;"***"&gt;:</h1>
+    <p>
+        <h4>横跨两行的单元格:</h4>
+        <table border="1">
+            <tr>
+                <th>姓名</th>
+                <th colspan="2">电话</th>
+            </tr>
+            <tr>
+                <td>Bill</td>
+                <td>123123123</td>
+                <td>123123123</td>
+            </tr>
+        </table>
+        
+        <h4>跨两列的单元格:</h4>
+        <table border="1">
+            <tr>
+                <th>姓名</th>
+                <td>Bill</td>
+            </tr>
+            <tr>
+                <th rawspan="2">电话</th>
+                <td>123123123</td>
+            </tr>
+            <tr>
+                <td>123123123</td>
+            </tr>
+        </table>
+
+<pre>
+源代码:
+        &lt;h4&gt;横跨两行的单元格:&lt;/h4&gt;
+        &lt;table border="1"&gt;
+            &lt;tr&gt;
+                &lt;th&gt;姓名&lt;/th&gt;
+                &lt;th colspan="2"&gt;电话&lt;/th&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;Bill&lt;/td&gt;
+                &lt;td&gt;123123123&lt;/td&gt;
+                &lt;td&gt;123123123&lt;/td&gt;
+            &lt;/tr&gt;
+        &lt;/table&gt;
+        
+        &lt;h4&gt;跨两列的单元格:&lt;/h4&gt;
+        &lt;table border="1"&gt;
+            &lt;tr&gt;
+                &lt;th&gt;姓名&lt;/th&gt;
+                &lt;td&gt;Bill&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;th rawspan="2"&gt;电话&lt;/th&gt;
+                &lt;td&gt;123123123&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;123123123&lt;/td&gt;
+            &lt;/tr&gt;
+        &lt;/table&gt;    
+</pre>        
+        
+    </p>
+    
+    <h1>8. 表格内的标签:</h1>
+    <p>
+        <table border="1">
+            <tr>
+                <td>
+                    <p>This is a paragraph.</p>
+                    <p>This is another paragraph.</p>                    
+                </td>
+                <td>There is a table in this cell:
+                    <table border="1">
+                        <tr>
+                            <td>A</td>
+                            <td>B</td>
+                        </tr>
+                        <tr>
+                            <td>C</td>
+                            <td>D</td>
+                        </tr>
+                    </table>    
+                </td>
+            </tr>
+            <tr>
+                <td>There is a list in this cell:</td>
+                <ul>
+                    <li>Apple</li>
+                    <li>Banana</li>
+                    <li>Pineapple</li>
+                </ul>
+                <td>Hello</td>
+            </tr>
+        </table>
+<pre>
+源代码:    
+        &lt;table border="1"&gt;
+            &lt;tr&gt;
+                &lt;td&gt;
+                    &lt;p&gt;This is a paragraph.&lt;/p&gt;
+                    &lt;p&gt;This is another paragraph.&lt;/p&gt;                    
+                &lt;/td&gt;
+                &lt;td&gt;There is a table in this cell:
+                    &lt;table border="1"&gt;
+                        &lt;tr&gt;
+                            &lt;td&gt;A&lt;/td&gt;
+                            &lt;td&gt;B&lt;/td&gt;
+                        &lt;/tr&gt;
+                        &lt;tr&gt;
+                            &lt;td&gt;C&lt;/td&gt;
+                            &lt;td&gt;D&lt;/td&gt;
+                        &lt;/tr&gt;
+                    &lt;/table&gt;    
+                &lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;There is a list in this cell:&lt;/td&gt;
+                &lt;ul&gt;
+                    &lt;li&gt;Apple&lt;/li&gt;
+                    &lt;li&gt;Banana&lt;/li&gt;
+                    &lt;li&gt;Pineapple&lt;/li&gt;
+                &lt;/ul&gt;
+                &lt;td&gt;Hello&lt;/td&gt;
+            &lt;/tr&gt;
+        &lt;/table&gt;    
+</pre>
+
+    </p>
+    
+    <h1>9. 单元格边距和间距(cellpadding/cellspacing):</h1>
+    <p>
+        <h4>Normal:</h4>
+        <table border="1">
+            <tr>
+                <td>First</td>
+                <td>Row</td>
+            </tr>
+            <tr>
+                <td>Second</td>
+                <td>Row</td>
+            </tr>
+        </table>
+        
+        <h4>Cellpadding:</h4>
+        <table border="1" cellpadding="10">
+            <tr>
+                <td>First</td>
+                <td>Row</td>
+            </tr>
+            <tr>
+                <td>Second</td>
+                <td>Row</td>
+            </tr>
+        </table>
+        
+        <h4>Cellspacing:</h4>        
+        <table border="1" cellspacing="10">
+            <tr>
+                <td>First</td>
+                <td>Row</td>
+            </tr>
+            <tr>
+                <td>Second</td>
+                <td>Row</td>
+            </tr>
+        </table>      
+        
+<pre>
+源代码:
+        &lt;h4&gt;Cellpadding:&lt;/h4&gt;
+        &lt;table border="1" cellpadding="10"&gt;
+            &lt;tr&gt;
+                &lt;td&gt;First&lt;/td&gt;
+                &lt;td&gt;Row&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;Second&lt;/td&gt;
+                &lt;td&gt;Row&lt;/td&gt;
+            &lt;/tr&gt;
+        &lt;/table&gt;
+        
+        &lt;h4&gt;Cellspacing:&lt;/h4&gt;        
+        &lt;table border="1" cellspacing="10"&gt;
+            &lt;tr&gt;
+                &lt;td&gt;First&lt;/td&gt;
+                &lt;td&gt;Row&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;Second&lt;/td&gt;
+                &lt;td&gt;Row&lt;/td&gt;
+            &lt;/tr&gt;
+        &lt;/table&gt;        
+</pre>           
+    </p>
+    
+    <h1>10. 表格的背景和单元格背景:</h1>
+    <p>
+        &nbsp;&nbsp;&lt;table bgcolor="red"/background="url"&gt; <br />
+        &nbsp;&nbsp;&lt;td bgcolor="red"&gt;
+    </p>
+    
+    <h1>11. 表格单元排列align:</h1>
+    <p>
+        <table width="400" border="1">
+            <tr>
+                <th align="left">日期..</th>
+                <th align="right">Jan</th>
+                <th align="right">Fir</th>
+            </tr>
+            <tr>
+                <th align="left">Clothes</th>
+                <td align="right">$100</td>
+                <td align="right">&200</td>                
+            </tr>
+            <tr>
+                <th align="left">Food</th>
+                <td align="right">$100</td>
+                <td align="right">&200</td>                
+            </tr>
+            <tr>
+                <th align="left">Totil</th>
+                <td align="right">&200</td>
+                <td align="right">$400</td>
+            </tr>
+        </table>
+        
+<pre>
+源代码:
+        &lt;table width="400" border="1"&gt;
+            &lt;tr&gt;
+                &lt;th align="left"&gt;日期..&lt;/th&gt;
+                &lt;th align="right"&gt;Jan&lt;/th&gt;
+                &lt;th align="right"&gt;Fir&lt;/th&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;th align="left"&gt;Clothes&lt;/th&gt;
+                &lt;td align="right"&gt;$100&lt;/td&gt;
+                &lt;td align="right"&gt;&200&lt;/td&gt;                
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;th align="left"&gt;Food&lt;/th&gt;
+                &lt;td align="right"&gt;$100&lt;/td&gt;
+                &lt;td align="right"&gt;&200&lt;/td&gt;                
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;th align="left"&gt;Totil&lt;/th&gt;
+                &lt;td align="right"&gt;&200&lt;/td&gt;
+                &lt;td align="right"&gt;$400&lt;/td&gt;
+            &lt;/tr&gt;
+        &lt;/table&gt;
+</pre>        
+    </p>
+    
+    <h4>12. 表格边框类型:</h4>
+    <p>
+        &nbsp;&nbsp;&lt;table frame="***"&gt; <br />
+        &nbsp;&nbsp;box, above, hsides, vsides,
+    </p>
+    
+  </body>
+  
+</html>

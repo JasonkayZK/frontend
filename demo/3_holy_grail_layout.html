@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>圣杯布局</title>
+    <style>
+        body {
+            padding: 20px;
+            margin: 0 auto;
+            background-color: #E2E2E2;
+            max-width: 1024px;
+            color: #595B66;
+            font-family: 'Microsoft Yahei', sans-serif;
+        }
+
+        h1, h2, h3, h4 {
+            color: #797979;
+            /*border-bottom: solid 1 px #797979;*/
+            padding: 5px 0;
+        }
+
+        h1, h2 {
+            border-bottom: solid 2px #797979;
+        }
+
+        p {
+            font-size: 15px;
+            background: #797979;
+            padding: 10px;
+            border-radius: 5px;
+            color: #B6DBF2;
+            line-height: 2;
+        }
+
+        img {
+            padding: 10px;
+        }
+
+    </style>
+
+    <!-- 网页Flex布局 -->
+    <style>
+        .HolyGrail {
+            display: flex;
+            min-height: 100vh;
+            flex-direction: column;
+            height: 70px;
+        }
+
+        header, footer {
+            flex: 0 0 5%;;
+            background-color: #797979;
+            color: #e0e0e0;
+            display: -moz-box;/*兼容Firefox*/
+            display: -webkit-box;/*兼容FSafari、Chrome*/
+
+            -moz-box-align: center;/*兼容Firefox*/
+            -webkit-box-align: center;/*兼容FSafari、Chrome */
+
+            -moz-box-pack: center;/*兼容Firefox*/
+            -webkit-box-pack: center;/*兼容FSafari、Chrome */
+        }
+
+        .HolyGrail-body {
+            display: flex;
+            flex: 1;
+        }
+
+        .HolyGrail-content {
+            flex: 1;
+            display: -moz-box;/*兼容Firefox*/
+            display: -webkit-box;/*兼容FSafari、Chrome*/
+
+            -moz-box-align: center;/*兼容Firefox*/
+            -webkit-box-align: center;/*兼容FSafari、Chrome */
+
+            -moz-box-pack: center;/*兼容Firefox*/
+            -webkit-box-pack: center;/*兼容FSafari、Chrome */
+        }
+
+        .HolyGrail-nav, .HolyGrail-ads {
+            /* 两个边栏的宽度设为12em */
+            flex: 0 0 12em;
+            display: -moz-box;/*兼容Firefox*/
+            display: -webkit-box;/*兼容FSafari、Chrome*/
+
+            -moz-box-align: center;/*兼容Firefox*/
+            -webkit-box-align: center;/*兼容FSafari、Chrome */
+
+            -moz-box-pack: center;/*兼容Firefox*/
+            -webkit-box-pack: center;/*兼容FSafari、Chrome */
+        }
+
+        .HolyGrail-ads {
+            background-color: #ffaa73;
+        }
+
+        .HolyGrail-nav {
+            /* 导航放到最左边 */
+            order: -1;
+            background-color: #64dcf0;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <h2>圣杯布局</h2>
+    <p>
+        圣杯布局（Holy Grail Layout）指的是一种最常见的网站布局。页面从上到下，分成三个部分：
+        <br/>
+        头部（header），躯干（body），尾部（footer）。其中躯干又水平分成三栏，从左到右为：导航、主栏、副栏。
+        <br/>
+        如下图：
+        <br/>
+        <img src="./images/flex_demo_6.png" alt="flex_demo_6.png"/>
+    </p>
+
+    <br/>
+
+    <div class="HolyGrail">
+    <header>#header</header>
+    <div class="HolyGrail-body">
+        <main class="HolyGrail-content">#center</main>
+        <nav class="HolyGrail-nav">#left</nav>
+        <aside class="HolyGrail-ads">#right</aside>
+    </div>
+    <footer>#footer</footer>
+    </div>
+</div>
+</body>
+</html>

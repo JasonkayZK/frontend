@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>Flex Dice</title>
+    <style>
+        /* 基本样式 */
+        * {
+            /*
+                content-box：
+                    标准盒模型，CSS定义的宽高只包含content的宽高
+                border-box：
+                    IE盒模型，CSS定义的宽高包括了content，padding和border
+            */
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            vertical-align: center;
+            flex-wrap: wrap;
+            align-content: center;
+            font-family: 'Open Sans', sans-serif;
+            color: #595B66;
+            background: -webkit-gradient(linear, left top, left bottom, from(#222), to(#333))
+        }
+
+        p {
+            font-size: 25px;
+            text-align: center;
+            background: #797979;
+            border-radius: 5px;
+            color: #B6DBF2;
+            line-height: 1.8;
+        }
+
+        #container {
+            width: 50%;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+        }
+
+        #container>div {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        /* 骰子样式 */
+        [class$="face"] {
+            margin: 16px;
+            padding: 4px;
+
+            background-color: #e7e7e7;
+            width: 104px;
+            height: 104px;
+            object-fit: contain;
+
+            box-shadow: inset 0 5px white,
+            inset 0 -5px #bbb,
+            inset 5px 0 #d7d7d7,
+            inset -5px 0 #d7d7d7;
+
+            border-radius: 10%;
+        }
+
+        /* 骰子点数样式 */
+        .item {
+            display: block;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            margin: 4px;
+
+            background-color: #333;
+            box-shadow: inset 0 3px #111, inset 0 -3px #555;
+        }
+    </style>
+
+    <style>
+        /* 各个骰子样式 */
+        /* 单个骰子 */
+        .one-face:nth-child(1) {
+            display: flex;
+        }
+        .one-face:nth-child(2) {
+            display: flex;
+            justify-content: center;
+        }
+        .one-face:nth-child(3) {
+            display: flex;
+            justify-content: flex-end;
+        }
+        .one-face:nth-child(4) {
+            display: flex;
+            align-items: center;
+        }
+        .one-face:nth-child(5) {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .one-face:nth-child(6) {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+        .one-face:nth-child(7) {
+            display: flex;
+            align-items: flex-end;
+        }
+        .one-face:nth-child(8) {
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+        }
+        .one-face:nth-child(9) {
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-end;
+        }
+
+        /* 两个骰子 */
+        .two-face:nth-child(1) {
+            display: flex;
+            justify-content: space-between;
+        }
+        .two-face:nth-child(2) {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .two-face:nth-child(3) {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .two-face:nth-child(4) {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+        .two-face:nth-child(5) {
+            display: flex;
+        }
+        .two-face:nth-child(5)>.item:nth-child(2) {
+            align-self: center;
+        }
+        .two-face:nth-child(6) {
+            display: flex;
+            justify-content: space-between;
+        }
+        .two-face:nth-child(6)>.item:nth-child(2) {
+            align-self: flex-end;
+        }
+
+        /* 三个骰子 */
+        .three-face {
+            display: flex;
+        }
+        .three-face>.item:nth-child(2) {
+            align-self: center;
+        }
+        .three-face>.item:nth-child(3) {
+            align-self: flex-end;
+        }
+
+        /* 四个骰子 */
+        .four-face:nth-child(1) {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+            align-content: space-between;
+        }
+        .four-face:nth-child(2) {
+            display: flex;
+            justify-content: space-between;
+        }
+        .four-face:nth-child(2) .column {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        /* 五个骰子 */
+        .five-face {
+            display: flex;
+            justify-content: space-between;
+        }
+        .five-face>.column {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .five-face>.column:nth-child(2) {
+            justify-content: center;
+        }
+
+        /* 六个骰子 */
+        .six-face {
+            display: flex;
+            justify-content: space-between;
+        }
+        .six-face>.column {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        /* 九个骰子 */
+        .nine-face {
+            display: flex;
+            flex-wrap: wrap;
+        }
+    </style>
+</head>
+<body>
+<div id="container">
+    <p>单个元素</p>
+    <div id="one">
+        <div class="one-face">
+            <div class="item"></div>
+        </div>
+        <div class="one-face">
+            <div class="item"></div>
+        </div>
+        <div class="one-face">
+            <div class="item"></div>
+        </div>
+        <div class="one-face">
+            <div class="item"></div>
+        </div>
+        <div class="one-face">
+            <div class="item"></div>
+        </div>
+        <div class="one-face">
+            <div class="item"></div>
+        </div>
+        <div class="one-face">
+            <div class="item"></div>
+        </div>
+        <div class="one-face">
+            <div class="item"></div>
+        </div>
+        <div class="one-face">
+            <div class="item"></div>
+        </div>
+    </div>
+
+    <p>两个元素</p>
+    <div id="two">
+        <div class="two-face">
+            <div class="item"></div>
+            <div class="item"></div>
+        </div>
+        <div class="two-face">
+            <div class="item"></div>
+            <div class="item"></div>
+        </div>
+        <div class="two-face">
+            <div class="item"></div>
+            <div class="item"></div>
+        </div>
+        <div class="two-face">
+            <div class="item"></div>
+            <div class="item"></div>
+        </div>
+        <div class="two-face">
+            <div class="item"></div>
+            <div class="item"></div>
+        </div>
+        <div class="two-face">
+            <div class="item"></div>
+            <div class="item"></div>
+        </div>
+    </div>
+
+    <p>三个元素</p>
+    <div id="three">
+        <div class="three-face">
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+        </div>
+    </div>
+
+    <p>四个元素</p>
+    <div id="four">
+        <div class="four-face">
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+        </div>
+        <div class="four-face">
+            <div class="column">
+                <div class="item"></div>
+                <div class="item"></div>
+            </div>
+            <div class="column">
+                <div class="item"></div>
+                <div class="item"></div>
+            </div>
+        </div>
+    </div>
+
+    <p>五个元素</p>
+    <div id="five">
+        <div class="five-face">
+            <div class="column">
+                <div class="item"></div>
+                <div class="item"></div>
+            </div>
+            <div class="column">
+                <div class="item"></div>
+            </div>
+            <div class="column">
+                <div class="item"></div>
+                <div class="item"></div>
+            </div>
+        </div>
+    </div>
+
+    <p>六个元素</p>
+    <div id="six">
+        <div class="six-face">
+            <div class="column">
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+            </div>
+            <div class="column">
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+            </div>
+        </div>
+    </div>
+
+    <p>九个元素</p>
+    <div id="nine">
+        <div class="nine-face">
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>输入框的布局</title>
+    <style>
+        body {
+            padding: 20px;
+            margin: 0 auto;
+            background-color: #E2E2E2;
+            max-width: 1024px;
+            color: #595B66;
+            font-family: 'Microsoft Yahei', sans-serif;
+        }
+
+        h1, h2, h3, h4 {
+            color: #797979;
+            /*border-bottom: solid 1 px #797979;*/
+            padding: 5px 0;
+        }
+
+        h1, h2 {
+            border-bottom: solid 2px #797979;
+        }
+
+        p {
+            font-size: 15px;
+            background: #797979;
+            padding: 10px;
+            border-radius: 5px;
+            color: #B6DBF2;
+            line-height: 2;
+        }
+
+        img {
+            padding: 10px;
+        }
+
+    </style>
+
+    <!-- 网页Flex布局 -->
+    <style>
+        .Site {
+            display: flex;
+            min-height: 20vh;
+            flex-direction: column;
+        }
+
+        .Site-content {
+            flex: 1;
+            display: -moz-box;/*兼容Firefox*/
+            display: -webkit-box;/*兼容FSafari、Chrome*/
+
+            -moz-box-align: center;/*兼容Firefox*/
+            -webkit-box-align: center;/*兼容FSafari、Chrome */
+
+            -moz-box-pack: center;/*兼容Firefox*/
+            -webkit-box-pack: center;/*兼容FSafari、Chrome */
+        }
+
+        header, footer {
+            flex: 0 0 5%;;
+            background-color: #797979;
+            color: #e0e0e0;
+            display: -moz-box;/*兼容Firefox*/
+            display: -webkit-box;/*兼容FSafari、Chrome*/
+
+            -moz-box-align: center;/*兼容Firefox*/
+            -webkit-box-align: center;/*兼容FSafari、Chrome */
+
+            -moz-box-pack: center;/*兼容Firefox*/
+            -webkit-box-pack: center;/*兼容FSafari、Chrome */
+        }
+
+    </style>
+</head>
+<body>
+<h2>输入框的布局</h2>
+<p>
+    有时，页面内容太少，无法占满一屏的高度，底栏就会抬高到页面的中间；
+    <br/>
+    这时可以采用Flex布局，让底栏总是出现在页面的底部，如下图：
+    <br/>
+    <img src="./images/flex_demo_8.png" alt="flex_demo_8.png"/>
+</p>
+
+<br/>
+
+<div class="Site">
+    <header>This is a header</header>
+    <main class="Site-content">
+        Sticky Footer
+    </main>
+    <footer>
+        This is a footer!
+    </footer>
+</div>
+</body>
+</html>

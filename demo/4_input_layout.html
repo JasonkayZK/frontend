@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>输入框的布局</title>
+    <style>
+        body {
+            padding: 20px;
+            margin: 0 auto;
+            background-color: #E2E2E2;
+            max-width: 1024px;
+            color: #595B66;
+            font-family: 'Microsoft Yahei', sans-serif;
+        }
+
+        h1, h2, h3, h4 {
+            color: #797979;
+            /*border-bottom: solid 1 px #797979;*/
+            padding: 5px 0;
+        }
+
+        h1, h2 {
+            border-bottom: solid 2px #797979;
+        }
+
+        p {
+            font-size: 15px;
+            background: #797979;
+            padding: 10px;
+            border-radius: 5px;
+            color: #B6DBF2;
+            line-height: 2;
+        }
+
+        img {
+            padding: 10px;
+        }
+
+    </style>
+
+    <!-- 网页Flex布局 -->
+    <style>
+        #container {
+            margin: 5px;
+            background-color: #fff;
+            display: flex;
+            flex-direction: column;
+        }
+
+        h4 {
+            margin: 40px 15px;
+
+        }
+
+        .two-column {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+        }
+
+        .label-text {
+            margin: 10px;
+            flex: 1;
+        }
+
+        .input-warp-left {
+            display: flex;
+            flex: 1;
+            margin: 10px;
+            flex-direction: row;
+            background-color: #fff;
+            object-fit: contain;
+            border-style: solid;
+            border-color: #3B4040;
+            border-width: 1px;
+        }
+
+        .input-label-left {
+            padding: 5px;
+            border-right: #3B4040 solid 1px;
+            background-color: #e7e7e7;
+            flex: 0 0 5%;
+        }
+
+        .input-warp-right {
+            display: flex;
+            flex: 1;
+            margin: 10px;
+            flex-direction: row-reverse;
+            background-color: #fff;
+            object-fit: contain;
+            border-style: solid;
+            border-color: #3B4040;
+            border-width: 1px;
+        }
+
+        .input-label-right {
+            padding: 5px;
+            border-left: #3B4040 solid 1px;
+            background-color: #e7e7e7;
+            flex: 0 0 5%;
+            display: -moz-box; /*兼容Firefox*/
+            display: -webkit-box; /*兼容FSafari、Chrome*/
+
+            -moz-box-align: center; /*兼容Firefox*/
+            -webkit-box-align: center; /*兼容FSafari、Chrome */
+
+            -moz-box-pack: center; /*兼容Firefox*/
+            -webkit-box-pack: center; /*兼容FSafari、Chrome */
+        }
+
+        .input-text {
+            flex-grow: 1;
+            margin-left: 5px;
+            border: 0;
+            outline: none;
+        }
+
+        .input-warp {
+            display: flex;
+            flex: 1;
+            background-color: #fff;
+            object-fit: contain;
+            border-style: solid;
+            border-color: #3B4040;
+            border-width: 1px;
+            margin: 5px;
+            justify-content: space-between;
+            flex-direction: row;
+            padding: 5px;
+            border-left: #3B4040 solid 1px;
+        }
+
+        .input-warp-span {
+            flex: 0 0 5%;
+            border: #3B4040 solid 1px;
+            background-color: #e7e7e7;
+        }
+
+        .input-warp>input {
+            width: 100%;
+            flex-grow: 1;
+            border: 0;
+            outline: none;
+            background-color: rgba(0, 0, 0, 0);
+        }
+    </style>
+</head>
+<body>
+<div>
+    <h2>输入框的布局</h2>
+    <p>
+        我们常常需要在输入框的前方添加提示，后方添加按钮，如下图：
+        <br/>
+        <img src="./images/flex_demo_7.png" alt="flex_demo_7.png"/>
+    </p>
+
+    <br/>
+
+    <div id="container">
+        <div class="two-column">
+            <div class="label-text">Add-on Prepended</div>
+            <div class="label-text">Add-on Prepended</div>
+        </div>
+        <div class="two-column">
+            <div class="input-warp-left">
+                <span class="input-label-left">Amount</span>
+                <label>
+                    <input class="input-text" type="text"/>
+                </label>
+            </div>
+            <div class="input-warp-right">
+                <span class="input-label-right">Go</span>
+                <label>
+                    <input class="input-text" type="text"/>
+                </label>
+            </div>
+        </div>
+        <div class="two-column">
+            <div class="input-warp-left">
+                <span class="input-label-left">🔍</span>
+                <label>
+                    <input class="input-text" type="text"/>
+                </label>
+            </div>
+            <div class="input-warp-right">
+                <span class="input-label-right">★</span>
+                <label>
+                    <input class="input-text" type="text"/>
+                </label>
+            </div>
+        </div>
+
+        <h4>
+            Appended and prepended Add-ons
+        </h4>
+
+        <div class="two-column">
+            <div class="input-warp">
+                <span class="input-warp-span">📧</span>
+                <label>Example One
+                    <input class="input-text" type="text"/>
+                </label>
+                <span class="input-warp-span">Encrypt</span>
+            </div>
+            <div class="input-warp">
+                <span class="input-warp-span">🔒</span>
+                <label>Example One
+                    <input class="input-text" type="text"/>
+                </label>
+                <span class="input-warp-span">Encrypt</span>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

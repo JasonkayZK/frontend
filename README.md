@@ -27,6 +27,6 @@
 | [悬浮](https://github.com/JasonkayZK/frontend/tree/widget/6_%E6%82%AC%E6%B5%AE) | 2020-12-22   | HTML中的动态&静态悬浮                                  |
 | [鼠标停顿图片放大](https://github.com/JasonkayZK/frontend/tree/widget/7_%E9%BC%A0%E6%A0%87%E5%81%9C%E9%A1%BFhover%E5%9B%BE%E7%89%87%E6%94%BE%E5%A4%A7) | 2020-12-22   | 纯CSS实现                                              |
 | [音乐播放器](https://github.com/JasonkayZK/frontend/tree/widget/8_music) | 2020-12-22   | 一个音乐播放器的全部素材                               |
-
+| [切换Favicon为Emoji](https://github.com/JasonkayZK/frontend/tree/9_svg_favicon) | 2021-06-04   | 切换Favicon为Emoji                               |
 
 
